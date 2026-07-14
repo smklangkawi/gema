@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dashboard Program Gema Kejayaan</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+    background:#eef3f8;
+}
+
+.container{
+
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px;
+
+}
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.card h2{
+
+    color:#003366;
+
+    margin-bottom:15px;
+
+}
+
+.number{
+
+    font-size:45px;
+
+    font-weight:bold;
+
+    color:#FFD700;
+
+}
+
+.chartBox{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-top:30px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+}
+
+table th{
+
+    background:#003366;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+table td{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+
+}
+
+.badge{
+
+    background:#FFD700;
+
+    color:#003366;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="assets/logo.png" width="90">
+
+</div>
+
+<div class="tajuk">
+
+<h1>DASHBOARD</h1>
+
+<h2>PROGRAM GEMA KEJAYAAN 2026</h2>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="dashboard">
+
+<div class="card">
+
+<h2>Jumlah Responden</h2>
+
+<div class="number" id="jumlah">0</div>
+
+</div>
+
+<div class="card">
+
+<h2>Purata Skor</h2>
+
+<div class="number" id="purata">0.0</div>
+
+</div>
+
+<div class="card">
+
+<h2>Kepuasan</h2>
+
+<div class="number" id="kepuasan">0%</div>
+
+</div>
+
+<div class="card">
+
+<h2>Status</h2>
+
+<h2><span class="badge">Cemerlang</span></h2>
+
+</div>
+
+</div>
+
+<div class="chartBox">
+
+<h2>Analisis Penilaian Program</h2>
+
+<canvas id="grafPenilaian"></canvas>
+
+</div>
+
+<div class="chartBox">
+
+<h2>Cadangan Penambahbaikan</h2>
+
+<table>
+
+<tr>
+
+<th>Bil</th>
+
+<th>Cadangan</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>Data akan dipaparkan daripada Google Sheets</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+// Contoh data
+
+let jumlah=186;
+
+let purata=4.68;
+
+let kepuasan=93.6;
+
+document.getElementById("jumlah").innerHTML=jumlah;
+
+document.getElementById("purata").innerHTML=purata;
+
+document.getElementById("kepuasan").innerHTML=kepuasan+"%";
+
+const ctx=document.getElementById("grafPenilaian");
+
+new Chart(ctx,{
+
+type:'bar',
+
+data:{
+
+labels:[
+'Motivasi',
+'Modul',
+'Guru',
+'Tempoh',
+'Program'
+],
+
+datasets:[{
+
+label:'Skor',
+
+data:[4.8,4.7,4.6,4.2,4.8]
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+display:false
+
+}
+
+},
+
+scales:{
+
+y:{
+
+min:0,
+
+max:5
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
