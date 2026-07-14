@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Borang Maklum Balas Program Gema Kejayaan</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#003366;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+h3{
+    color:#003366;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+
+}
+
+table th{
+
+    background:#003366;
+    color:white;
+    padding:12px;
+
+}
+
+table td{
+
+    border:1px solid #ddd;
+    text-align:center;
+    padding:10px;
+
+}
+
+button{
+
+    background:#003366;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:30px;
+    font-size:16px;
+
+}
+
+button:hover{
+
+    background:#FFD700;
+    color:#003366;
+
+}
+
+.success{
+
+    display:none;
+    background:#d4edda;
+    color:#155724;
+    padding:15px;
+    margin-top:20px;
+    border-radius:10px;
+    text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="assets/logo.png" width="80">
+
+</div>
+
+<div class="tajuk">
+
+<h1>PROGRAM GEMA KEJAYAAN 2026</h1>
+
+<h2>SMK LANGKAWI P. TUBA</h2>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<h1>Borang Maklum Balas Program</h1>
+
+<p align="center">
+
+Sila isi borang ini dengan jujur.
+
+</p>
+
+<form id="feedbackForm">
+
+<h3>Maklumat Murid</h3>
+
+<label>Nama Murid</label>
+
+<input type="text" name="nama">
+
+<label>Tingkatan</label>
+
+<select name="tingkatan">
+
+<option>Tingkatan 4</option>
+
+<option>Tingkatan 5</option>
+
+</select>
+
+<label>Kelas</label>
+
+<input type="text" name="kelas">
+
+<label>Mata Pelajaran</label>
+
+<select name="subjek">
+
+<option>Bahasa Melayu</option>
+
+<option>Bahasa Inggeris</option>
+
+<option>Matematik</option>
+
+<option>Sejarah</option>
+
+<option>Sains</option>
+
+</select>
+
+<h3>Penilaian Program</h3>
+
+<table>
+
+<tr>
+
+<th>Item</th>
+
+<th>1</th>
+
+<th>2</th>
+
+<th>3</th>
+
+<th>4</th>
+
+<th>5</th>
+
+</tr>
+
+<tr>
+
+<td>Program memberi motivasi belajar</td>
+
+<td><input type="radio" name="q1" value="1"></td>
+<td><input type="radio" name="q1" value="2"></td>
+<td><input type="radio" name="q1" value="3"></td>
+<td><input type="radio" name="q1" value="4"></td>
+<td><input type="radio" name="q1" value="5" required></td>
+
+</tr>
+
+<tr>
+
+<td>Modul membantu pembelajaran</td>
+
+<td><input type="radio" name="q2" value="1"></td>
+<td><input type="radio" name="q2" value="2"></td>
+<td><input type="radio" name="q2" value="3"></td>
+<td><input type="radio" name="q2" value="4"></td>
+<td><input type="radio" name="q2" value="5" required></td>
+
+</tr>
+
+<tr>
+
+<td>Guru menyampaikan dengan jelas</td>
+
+<td><input type="radio" name="q3" value="1"></td>
+<td><input type="radio" name="q3" value="2"></td>
+<td><input type="radio" name="q3" value="3"></td>
+<td><input type="radio" name="q3" value="4"></td>
+<td><input type="radio" name="q3" value="5" required></td>
+
+</tr>
+
+<tr>
+
+<td>Program memenuhi harapan saya</td>
+
+<td><input type="radio" name="q4" value="1"></td>
+<td><input type="radio" name="q4" value="2"></td>
+<td><input type="radio" name="q4" value="3"></td>
+<td><input type="radio" name="q4" value="4"></td>
+<td><input type="radio" name="q4" value="5" required></td>
+
+</tr>
+
+</table>
+
+<h3>Cadangan Penambahbaikan</h3>
+
+<textarea
+rows="6"
+name="cadangan"
+placeholder="Sila berikan cadangan anda..."></textarea>
+
+<center>
+
+<button type="submit">
+
+HANTAR MAKLUM BALAS
+
+</button>
+
+</center>
+
+</form>
+
+<div class="success" id="success">
+
+✅ Terima kasih.
+
+Maklum balas anda telah berjaya dihantar.
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 SMK Langkawi P. Tuba
+
+</p>
+
+</footer>
+
+<script>
+
+const form=document.getElementById("feedbackForm");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+/*
+Nanti di sini akan disambungkan kepada
+Google Apps Script.
+
+Contoh:
+
+fetch(URL_APPS_SCRIPT,{
+method:'POST',
+body:new FormData(form)
+})
+
+*/
+
+document.getElementById("success").style.display="block";
+
+form.reset();
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:'smooth'
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
