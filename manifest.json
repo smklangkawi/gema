@@ -1,0 +1,24 @@
+{
+    "name": "Program Gema Kejayaan",
+    "short_name": "GemaKejayaan",
+    "description": "Portal Program Gema Kejayaan SMK Langkawi P. Tuba",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#003366",
+    "theme_color": "#003366",
+    "lang": "ms",
+    "icons": [
+        {
+            "src": "assets/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
