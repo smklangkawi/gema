@@ -1,0 +1,373 @@
+/* ==================================================
+   PROGRAM GEMA KEJAYAAN 2026
+   SMK LANGKAWI P. TUBA
+   style.css
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f8;
+    color:#333;
+}
+
+/*================ HEADER =================*/
+
+header{
+
+    background:linear-gradient(135deg,#003366,#0055a5);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    flex-wrap:wrap;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.3);
+
+}
+
+.logo img{
+
+    width:100px;
+
+    height:100px;
+
+    object-fit:contain;
+
+    margin-right:20px;
+
+}
+
+.tajuk{
+
+    text-align:center;
+
+}
+
+.tajuk h1{
+
+    font-size:2rem;
+
+    color:#FFD700;
+
+}
+
+.tajuk h2{
+
+    margin-top:8px;
+
+    font-size:1.3rem;
+
+}
+
+.tajuk p{
+
+    margin-top:8px;
+
+    font-style:italic;
+
+}
+
+/*================ HERO =================*/
+
+.hero{
+
+    background:url("assets/hero.jpg") center center;
+
+    background-size:cover;
+
+    min-height:450px;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    background:rgba(0,40,90,.72);
+
+    width:100%;
+
+    min-height:450px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.overlay h2{
+
+    font-size:2.8rem;
+
+    margin-bottom:15px;
+
+}
+
+.overlay p{
+
+    font-size:1.2rem;
+
+    margin-bottom:30px;
+
+}
+
+.btn{
+
+    background:#FFD700;
+
+    color:#003366;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:white;
+
+    transform:scale(1.05);
+
+}
+
+/*================ MENU =================*/
+
+.menu{
+
+    width:95%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    margin-top:-60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    color:#003366;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    background:#003366;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#FFD700;
+
+    color:#003366;
+
+}
+
+/*================ INFO =================*/
+
+.info{
+
+    max-width:1000px;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.info h2{
+
+    color:#003366;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.info p{
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+/*================ FOOTER =================*/
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:50px;
+
+}
+
+footer p{
+
+    margin:6px;
+
+}
+
+/*================ ANIMATION =================*/
+
+.card,
+.btn,
+.button{
+
+    transition:all .3s ease;
+
+}
+
+/*================ MOBILE =================*/
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+.logo img{
+
+    margin:0 0 15px 0;
+
+}
+
+.tajuk h1{
+
+    font-size:1.5rem;
+
+}
+
+.tajuk h2{
+
+    font-size:1rem;
+
+}
+
+.overlay h2{
+
+    font-size:2rem;
+
+}
+
+.overlay p{
+
+    font-size:1rem;
+
+}
+
+.menu{
+
+    margin-top:20px;
+
+}
+
+.info{
+
+    width:92%;
+
+    padding:25px;
+
+}
+
+}
