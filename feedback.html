@@ -290,39 +290,69 @@ Maklum balas anda telah berjaya dihantar.
 
 <script>
 
-const form=document.getElementById("feedbackForm");
+const WEBAPP_URL = "PASTE_URL_APPS_SCRIPT_DI_SINI";
 
-form.addEventListener("submit",function(e){
+const form = document.getElementById("feedbackForm");
 
-e.preventDefault();
+form.addEventListener("submit", async function(e){
 
-/*
-Nanti di sini akan disambungkan kepada
-Google Apps Script.
+    e.preventDefault();
 
-Contoh:
+    const data = {
+        nama: form.nama.value,
+        tingkatan: form.tingkatan.value,
+        kelas: form.kelas.value,
+        subjek: form.subjek.value,
 
-fetch(URL_APPS_SCRIPT,{
-method:'POST',
-body:new FormData(form)
-})
+        q1: form.q1.value,
+        q2: form.q2.value,
+        q3: form.q3.value,
+        q4: form.q4.value,
 
-*/
+        // Jika sudah ada Q5 hingga Q10, tambah di sini
+        q5: form.q5 ? form.q5.value : "",
+        q6: form.q6 ? form.q6.value : "",
+        q7: form.q7 ? form.q7.value : "",
+        q8: form.q8 ? form.q8.value : "",
+        q9: form.q9 ? form.q9.value : "",
+        q10: form.q10 ? form.q10.value : "",
 
-document.getElementById("success").style.display="block";
+        cadangan: form.cadangan.value
+    };
 
-form.reset();
+    try{
 
-window.scrollTo({
+        const response = await fetch(WEBAPP_URL,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(data)
+        });
 
-top:document.body.scrollHeight,
+        const result = await response.json();
 
-behavior:'smooth'
+        if(result.status=="success"){
+
+            alert("Maklum balas berjaya dihantar.");
+
+            form.reset();
+
+        }else{
+
+            alert("Ralat : "+result.message);
+
+        }
+
+    }catch(err){
+
+        alert("Tidak dapat berhubung dengan pelayan.");
+
+        console.log(err);
+
+    }
 
 });
-
-});
-
 </script>
 
 </body>
